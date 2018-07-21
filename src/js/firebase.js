@@ -47,7 +47,7 @@ logout.addEventListener('click', event => {
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
   if (firebaseUser) {
-    console.log(firebaseUser);
+    console.log(firebaseUser); // Este "console.log" es para verificar que se esté guardando la info de usuario.
   } else {
     console.log('not logged in');
     logout.classList.add('hide');
@@ -63,8 +63,8 @@ loginGoogle.addEventListener('click', event => {
   firebase.auth()
     .signInWithPopup(provider) // popUp te va a dar la ventana de acceso a tu cuenta de google. parámetro de la variable provider que tiene la autenticación con google
     
-    .then(function(result) { // entonces ejecuta la función que es el resultado (acceder con google)
-      console.log(result);
-      console.log(provider);
+    .then(function(provider) { // entonces ejecuta la función que es el resultado (acceder con google)
+      // console.log(result);
+      // console.log(provider);
     });
 });
