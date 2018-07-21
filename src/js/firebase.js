@@ -63,12 +63,8 @@ loginGoogle.addEventListener('click', event => {
   firebase.auth()
     .signInWithPopup(provider) // popUp te va a dar la ventana de acceso a tu cuenta de google. parámetro de la variable provider que tiene la autenticación con google
     
-    .then(function(provider) { // entonces ejecuta la función que es el resultado (acceder con google)
+    .then(function(result) { // entonces ejecuta la función que es el resultado (acceder con google)
       console.log(result);
       console.log(provider);
-
-      // let token = result.credential.accessToken;
-      // let user = result.user;
-      // console.log(result);
     });
 });
